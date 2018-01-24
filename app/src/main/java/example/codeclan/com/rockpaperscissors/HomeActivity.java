@@ -12,14 +12,11 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-
     }
 
     public void onLetsPlayClicked(View button){
         Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
-
     }
 
 }
