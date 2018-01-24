@@ -25,4 +25,25 @@ public class GameTest {
         assertEquals("rock wins against scissors", game.play());
     }
 
+    @Test
+    public void scissorLosesToRock(){
+        Game game = new Game("scissors", "rock");
+        assertEquals("rock wins against scissors", game.play());
+    }
+    
+    @Test
+    public void canDraw(){
+        Game game = new Game("rock", "rock");
+        assertEquals("it's a draw", game.play());
+    }
+
+    @Test
+    public void detectsInvalidMove(){
+        Game game = new Game("batman", "cling film");
+        assertEquals("something went wrong. invalid move.", game.play());
+    }
+
+
+
+
 }

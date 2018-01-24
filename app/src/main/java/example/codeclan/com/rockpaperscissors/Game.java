@@ -15,10 +15,10 @@ class Game {
         }
 
     public String play() {
-//
-//        if (hand1 == hand2) {
-//            return "it's a draw";
-//        }
+
+        if (hand1 == hand2) {
+            return "it's a draw";
+        }
 
         if (hand1 == "rock") {
             if (hand2 == "paper") {
@@ -44,7 +44,7 @@ class Game {
             }
         }
 
-        return "it's a draw";
+        return "something went wrong. invalid move.";
     }
 
 
