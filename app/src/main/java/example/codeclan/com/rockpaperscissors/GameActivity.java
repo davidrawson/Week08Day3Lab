@@ -9,10 +9,10 @@ import android.widget.TextView;
 public class GameActivity extends AppCompatActivity {
 
     TextView moveText;
-    View rockButton;
-    View paperButton;
-    View scissorsButton;
-    TextView result;
+//    View rockButton;
+//    View paperButton;
+//    View scissorsButton;
+//    TextView result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,25 +27,37 @@ public class GameActivity extends AppCompatActivity {
     public void onRockButtonClicked(View button){
         Move move = new Move();
         move.setUpMoves();
-        Log.d(getClass().toString(), "Computers move: " + move.getRandomMove());
-        Game game = new Game(move.getRandomMove(), "rock");
+        String randomMove = move.getRandomMove();
+        Game game = new Game(randomMove, "rock");
+        String gameResult = game.play();
+        TextView computersMove = findViewById(R.id.computer_move);
+        computersMove.setText(randomMove);
+        TextView resultView = findViewById(R.id.result);
+        resultView.setText(gameResult.toString());
     }
 
 
     public void onPaperButtonClicked(View button){
         Move move = new Move();
         move.setUpMoves();
-        Log.d(getClass().toString(), "Computers move: " + move.getRandomMove());
-        Game game = new Game(move.getRandomMove(), "paper");
+        String randomMove = move.getRandomMove();
+        Game game = new Game(randomMove, "paper");
+        String gameResult = game.play();
+        TextView computersMove = findViewById(R.id.computer_move);
+        computersMove.setText(randomMove);
+        TextView resultView = findViewById(R.id.result);
+        resultView.setText(gameResult.toString());
     }
 
 
     public void onScissorsButtonClicked(View button){
         Move move = new Move();
         move.setUpMoves();
-        Log.d(getClass().toString(), "Computers move: " + move.getRandomMove());
-        Game game = new Game(move.getRandomMove(), "scissors");
+        String randomMove = move.getRandomMove();
+        Game game = new Game(randomMove, "scissors");
         String gameResult = game.play();
+        TextView computersMove = findViewById(R.id.computer_move);
+        computersMove.setText(randomMove);
         TextView resultView = findViewById(R.id.result);
         resultView.setText(gameResult.toString());
     }
