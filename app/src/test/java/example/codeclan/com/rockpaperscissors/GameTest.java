@@ -30,7 +30,7 @@ public class GameTest {
         Game game = new Game("scissors", "rock");
         assertEquals("rock wins against scissors", game.play());
     }
-    
+
     @Test
     public void canDraw(){
         Game game = new Game("rock", "rock");
