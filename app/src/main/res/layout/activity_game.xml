@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="32dp"
+        android:onClick="onRockButtonClicked"
         android:text="Rock"
         app:layout_constraintEnd_toStartOf="@+id/paper"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +25,7 @@
         android:layout_marginBottom="168dp"
         android:layout_marginStart="148dp"
         android:layout_marginTop="295dp"
+        android:onClick="onPaperButtonClicked"
         android:text="Paper"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,13 +38,14 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="8dp"
+        android:onClick="onScissorsButtonClicked"
         android:text="Scissors"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/paper"
         app:layout_constraintTop_toTopOf="@+id/paper" />
 
     <TextView
-        android:id="@+id/computerMove"
+        android:id="@+id/computer_move"
         android:layout_width="116dp"
         android:layout_height="52dp"
         android:layout_marginBottom="120dp"
